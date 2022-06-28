@@ -55,8 +55,13 @@ def payment_success(payment, cost):
         return True
     else:
         print("Sorry that's not enough money. Money refunded.")
+        return False
 
-# def make_coffee():
+def make_coffee(drink, drink_ingredients,):
+    """Deduct the required ingredients from the resources."""
+    for item in drink_ingredients:
+        resources[item] -= drink_ingredients[item]
+    print(f"Here is your {drink} ☕️. Enjoy!")
 
 
 money = 0
